@@ -1,0 +1,13 @@
+{{$currentPage := .Name}}
+<nav class="tag-navigation">  
+    <ul class="tag-list">
+    {{ range $.Site.Taxonomies.tags.ByCount }}
+        <li class="tag {{if eq $currentPage .Name}} tag--active {{end}}">
+            <a href="{{ $.Site.BaseURL }}/tags/{{ .Name | urlize }}/">
+                {{ .Name }}
+                <span class="tag__counter">| {{ .Count }}</span>
+            </a>
+        </li>
+    {{ end }}
+    </ul>
+</nav>

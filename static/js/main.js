@@ -50,8 +50,8 @@ function isInternetExplorer () {
     return (agent.indexOf("MSIE") > -1 || agent.indexOf("Trident") > -1);
 }
 
-function setFooter () {
-    document.getElementById('footer-text').innerHTML = "Copyright (c) "+ new Date().getFullYear().toString();
+function setFooter (id) {
+    document.getElementById(id).innerHTML = "Copyright (c) "+ new Date().getFullYear().toString();
 }
 
 function setAccessibility () {
@@ -71,18 +71,24 @@ function keyNavigation (event) {
     if (event.key=="ArrowRight") {
         focusNextElement(event.target, 1);
     }
+    if (event.key=="Backspace") {
+        history.back() 
+    }
 
 }
 
 function focusNextElement (target, index) {
     var elements = document.getElementsByTagName("a");
+    /* Convert html collection to array for index find */
     var arr = Array.from(elements);
     var currentIndex = arr.findIndex(el => el == target);
-    if (currentIndex === -1) {
+    /* Focus first element if none has focus or first element after iteration */
+    if (currentIndex === -1 || currentIndex + index >= arr.length) {
         elements[0].focus();
         return;
     }
-    if (currentIndex+index < 0) {
+    if (currentIndex + index < 0) {
+        elements[arr.length-1].focus();
         return
     }
     elements[currentIndex+index].focus();

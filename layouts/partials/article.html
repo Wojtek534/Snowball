@@ -1,10 +1,20 @@
 <article class="article">
-    <span class="article__date">Created {{ .Date.Format "January 2, 2006" }}</span>
+    <span class="article__date">Created - {{ .Date.Format "January 2, 2006" }}</span>
     {{if .Params.Lastmod}}
-      <span class="article__date">Last update {{ .Params.Lastmod.Format "January 2, 2006" }}</span>
+      <span class="article__date">Last update - {{ .Params.Lastmod.Format "January 2, 2006" }}</span>
     {{end}}
-    <a id="{{.Title}}" class="article__title" href="{{ .Permalink }}">{{ .Title }}</a>
+    <!-- TODO -->
+    {{if .IsPage }}
+      <a id="{{.Title}}" class="article__title" href="{{ .Permalink }}">{{ .Title }}</a>
+    {{else}}
+      <div class="article__title">{{.Title}}</div>
+    {{end}}
     <div class="article__content">
       {{ .Content}}
     </div>
+    <ul class="article__tags">
+      {{ range .Params.tags }}
+          <li class="tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+      {{ end }}
+      </ul>
 </article>

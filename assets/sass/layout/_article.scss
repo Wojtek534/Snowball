@@ -1,8 +1,20 @@
+.article-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+    //max-height: calc( 100vh - 14rem);
+    & .article:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
 .article {
     display: flex;
     flex-direction: column;
     background-color: var(--color-cover);
     padding: 1rem;
+    border-radius: var(--border-radius);
     & h1, h2, h3 {
         margin: 0;
     }
@@ -24,10 +36,16 @@
         font-style: italic;
         width: fit-content;
         margin-bottom: .25rem;
+        font-weight: 500;
     }
     & .article__content {
         margin-top: 1rem;
 
     }
-
+    .article__tags {
+        margin-top: 1rem;
+        & .tag:not(:first-child) {
+            margin-left: .25rem;
+        }
+    }
 }

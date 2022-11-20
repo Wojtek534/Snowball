@@ -1,5 +1,24 @@
 {{ define "main"}}
-    {{  range .Site.RegularPages.ByDate.Reverse }}
-        {{ partial "article.html" .}}
+    {{$content := (where .Site.RegularPages "Params.type" "content").ByDate.Reverse }}
+    {{$document := (where .Site.RegularPages "Params.type" "document").ByDate.Reverse}}
+    {{ $tagSlice := slice .Name }}
+    {{$tags := where .Site.RegularPages "Params.tags" "intersect" $tagSlice}}
+    <div class="article-list">
+    {{ if eq .Type "content" }}
+        {{  range $content}}
+            {{ partial "article.html" . }}
+        {{ end }}
+    {{ else if eq .Type "document"}}
+        {{  range $document}}
+            {{ partial "article.html" . }}
+        {{ end }}
+    {{ else if eq .Type "tags"}}
+        {{ range $tags }}
+            {{ partial "article.html" . }}
+        {{end}}
     {{ end }}
+    {{ range $tags }}
+        {{ partial "article.html" . }}
+    {{end}}
+    </div>
 {{end}}

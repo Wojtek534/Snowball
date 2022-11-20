@@ -1,7 +1,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.Title }} | theme</title>
-<meta property="og:title" content="{{ site.Title }}" />
+{{ $title := site.Title }}
+<title>{{ $title }} | theme</title>
+<meta property="title" content="{{ $title }}" />
+{{ $description := .Description | default .Site.Params.Description }}
+<meta name="description" 
+content="{{ if .Params.description }}{{- .Params.description -}}{{ else }}{{- .Site.Params.description -}}{{ end }}">
+{{ $keywords := .Site.Params.MetaKeywords | default (slice) }}
+<meta name="keywords" content='{{ delimit $keywords ", "}}'>
+<meta name="author" content="{{.Site.Params.Author}}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- favicon -->
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {{ partial "head-meta.html" }}
+        {{ partial "head-meta.html" . }}
     </head>
     <body>
         <div class="layout" >
-            {{ partial "nav.html" }}
+            {{ partial "nav.html" . }}
+            {{ partial "tags.html" . }}
             <main class="main">
                 {{ block "main" . }}{{ end }}
             </main>
-            {{ partial "footer.html" }}
+            {{ partial "footer.html" . }}
         </div>
         <script type="text/javascript">
             // Set theme

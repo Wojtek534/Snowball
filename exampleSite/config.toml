@@ -3,6 +3,14 @@ languageCode = 'en-us'
 title = 'snowball'
 Theme = 'snowball'
 
+[author]
+  name = "Wojciech Rzepka"
+
+[params]
+  author = "Wojciech Rzepka"
+  description = 'Documentation template in Hugo'
+  metaKeywords = ["documentation", "minimal", "dark", "hugo", "snowball"]
+
 [menu]
   [[menu.main]]
     name = "Content"
@@ -18,3 +26,8 @@ Theme = 'snowball'
     name = "Tags"
     url = "/tags/"
     weight = 3
+
+  [[menu.main]]
+  name = "Documents"
+  url = "/document/"
+  weight = 4

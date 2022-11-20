@@ -11,12 +11,13 @@
     --color-link: #0a75ad;
     --color-black: #111;
     --color-white: #fff;
+    --border-radius: .5rem;
   }
   
   [data-theme="dark"] {
     --primary-color: #fff;
     --color-frame: #f5f5f5;
-    --color-cover: #232323;
+    --color-cover: #1e1e1e;
     --color-cover-light: #333;
     --color-text: #f9f9f9;
     --color-text-contrast: #111;

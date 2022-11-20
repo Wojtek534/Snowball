@@ -1,5 +1,6 @@
 name = "Snowball"
 license = "MIT"
+description = 'Documentation template in Hugo'
 tags = ["documentation", "minimalist", "responsive", "dark"]
 
 [author]
