@@ -1,0 +1,10 @@
+<article class="article">
+    <span class="article__date">Created {{ .Date.Format "January 2, 2006" }}</span>
+    {{if .Params.Lastmod}}
+      <span class="article__date">Last update {{ .Params.Lastmod.Format "January 2, 2006" }}</span>
+    {{end}}
+    <a id="{{.Title}}" class="article__title" href="{{ .Permalink }}">{{ .Title }}</a>
+    <div class="article__content">
+      {{ .Content}}
+    </div>
+</article>

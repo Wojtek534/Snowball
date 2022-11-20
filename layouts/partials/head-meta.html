@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.Title }} | theme</title>
+<meta property="og:title" content="{{ site.Title }}" />
+<!-- favicon -->
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+
+<!-- import css -->
+{{ $global := resources.Get "global.css" }}
+<link rel="stylesheet" href="{{ $global.RelPermalink }}">
+{{ $normalize := resources.Get "normalize.css" }}
+<link rel="stylesheet" href="{{ $normalize.RelPermalink }}">
+{{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) "includePaths" (slice "node_modules/myscss")) }}
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<!-- import js -->
+<script src="{{ .Site.BaseURL }}/js/main.js"></script>

@@ -1,0 +1,9 @@
+.bullet {
+    margin-top: -2rem;
+}
+.bullet::after {
+    content: "//";
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-weight: bold;
+}

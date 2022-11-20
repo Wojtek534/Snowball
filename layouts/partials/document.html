@@ -1,0 +1,19 @@
+{{ $header := where site.RegularPages "Type" "side-menu" }}
+{{ $articles := ( where .Site.Pages "Type" "document") }}
+<div class="document">
+    <aside id="document-list" class="document__list">
+      {{ range .Site.Menus.main }}
+          {{.Name}}
+        {{end}}
+    </aside>
+    <div class="document__detail">
+        {{ range sort $articles ".Params.order"}}
+          {{ partial "article.html" .}}
+        {{ end }}
+    </div>
+    <div class="document__tags">
+      {{range .Tags}}
+        <span>{{.Name}}tag</span>
+      {{end}}
+    </div>
+  </div>

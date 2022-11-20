@@ -1,0 +1,6 @@
+name = "Snowball"
+license = "MIT"
+tags = ["documentation", "minimalist", "responsive", "dark"]
+
+[author]
+  name = "Wojciech Rzepka"

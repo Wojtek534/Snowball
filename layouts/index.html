@@ -1,0 +1,18 @@
+{{define "main"}}
+  <div class="document">
+    <aside id="document-list" class="document__list">
+      <ul>
+      {{ range .Site.Menus.main }}
+        <li>
+          <a class="document-list__item" href="{{ .URL | absURL }}" alt="Navigation to {{.Name}}">{{.Name}}</a>
+        </li>
+        {{end}}
+      </ul>
+    </aside>
+    <div class="document__detail">
+        {{ range .Site.RegularPages.ByDate.Reverse}}
+          {{ partial "article.html" .}}
+        {{ end }}
+    </div>
+  </div>
+{{end}}

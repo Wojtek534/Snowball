@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div class="article-single">
+    <img class="" src="{{ .Params.image }}">
+      <h1 class="">{{ .Title }}</h1>
+      <div class="">
+        <span>Written by: {{ .Params.author }}</span>
+        <span>{{ .Date.Format "January 2, 2006" }}</span>
+        <!-- Tag navigation can be added later -->
+      </div>
+    </div>
+  </div>
+  {{ .Content }}
+{{ end }}
