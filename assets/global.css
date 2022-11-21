@@ -148,6 +148,7 @@
     //background-color: var(--color-text);
     background-color: var(--color-link);
     border-radius: 2rem;
+    min-height: 5rem;
     border: 6px solid transparent;
     background-clip: content-box;
   }

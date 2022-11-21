@@ -3,7 +3,6 @@
     flex-direction: column;
     overflow-y: auto;
     height: 100%;
-    //max-height: calc( 100vh - 14rem);
     & .article:not(:last-child) {
         margin-bottom: 2rem;
     }
@@ -15,18 +14,7 @@
     background-color: var(--color-cover);
     padding: 1rem;
     border-radius: var(--border-radius);
-    & h1, h2, h3 {
-        margin: 0;
-    }
-    & h1 {
-        font-size: 1.2rem;
-    }
-    & h2 {
-        font-size: 1.1rem;
-    }
-    & h3 {
-        font-size: 1rem;
-    }
+    @include typo;
     & .article__title {
         font-weight: bold;
         font-size: 1.5rem;
@@ -39,8 +27,15 @@
         font-weight: 500;
     }
     & .article__content {
-        margin-top: 1rem;
-
+        & .highlight {
+            font-size: 1rem;
+            margin-top: 1rem;
+            & pre {
+                padding: 0.5rem 2rem;
+                color: var(--color-text-contrast) !important;
+                background-color: var(--color-link) !important;
+            }
+        }
     }
     .article__tags {
         margin-top: 1rem;

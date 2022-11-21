@@ -3,6 +3,7 @@
     {{$document := (where .Site.RegularPages "Params.type" "document").ByDate.Reverse}}
     {{ $tagSlice := slice .Name }}
     {{$tags := where .Site.RegularPages "Params.tags" "intersect" $tagSlice}}
+    <!-- Refactor ^ -->
     <div class="article-list">
     {{ if eq .Type "content" }}
         {{  range $content}}
@@ -17,8 +18,5 @@
             {{ partial "article.html" . }}
         {{end}}
     {{ end }}
-    {{ range $tags }}
-        {{ partial "article.html" . }}
-    {{end}}
     </div>
 {{end}}

@@ -78,9 +78,11 @@
       flex-direction: row;
     }
   }
-  & .tag-navigation {
+  & .navigation {
     grid-column-start: 2;
-    margin: 0 .5rem;
+    /* Compensate padding on elements below - required for accessabilities */
+    margin: 0rem .5rem -.5rem .5rem;
+
   }
   
     & .main {

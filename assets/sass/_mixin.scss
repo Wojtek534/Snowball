@@ -1,19 +1,21 @@
-@mixin image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    box-sizing: border-box;
-    padding: 0;
-    border: none;
-    margin: auto;
-    display: block;
-    width: 0;
-    min-width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+@mixin typo {
+    line-height: 1.5;
+    letter-spacing: .005rem;
+    & h1, h2, h3, p {
+        margin-top: 1rem;
+    }
+    & h1 {
+        font-size: 1.2rem;
+    }
+    & h2 {
+        font-size: 1.1rem;
+    }
+    & h3 {
+        font-size: 1rem;
+    }
+    & ul, ol {
+        margin-left: 1rem;
+    }
 }
 
 @mixin stripe {

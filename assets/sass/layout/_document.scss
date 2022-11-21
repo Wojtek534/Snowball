@@ -15,10 +15,11 @@
     & .document__list{
         flex: 1 0 0;
         height: 100%;
-        padding: 0.5rem 0;
+        padding: 0.5rem;
         overflow: auto;
-        background-color: var(--color-cover);
-        border-radius: var(--border-radius);
+        //background-color: var(--color-cover);
+        //border-right: 1px solid var(--color-background-contrast);
+        //border-radius: var(--border-radius);
         @media only screen and (max-width: 37.5em) {
             flex: 0 1 auto;
             overflow-x: hidden;
@@ -44,13 +45,15 @@
             flex-direction: column;
             align-items: center;
             & li {
-                width: 80%;
+                //width: 80%;
+                width: 100%;
                 & a {
                     min-height: 3rem;
                     padding: 0.5rem 2rem;
                     border-radius: 0.5rem;
                     width: 100%;
                     color: var(--color-text);
+                    font-weight: 500;
                     text-transform: lowercase;
                     &:not(:last-child) {
                         margin-bottom: 0.5rem;
@@ -66,10 +69,11 @@
         }
     }
     & .document__detail {
-        flex: 5 0 0;
+        flex: 6 0 0;
         display: flex;
         flex-direction: column;
         overflow: auto;
+        padding: .5rem 0;
         @media only screen and (max-width: 37.5em) {
             flex: 0 1 auto;
             overflow-x: hidden;

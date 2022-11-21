@@ -3,8 +3,8 @@
     {{if .Params.Lastmod}}
       <span class="article__date">Last update - {{ .Params.Lastmod.Format "January 2, 2006" }}</span>
     {{end}}
-    <!-- TODO -->
-    {{if .IsPage }}
+    <!-- Todo partials context -->
+    {{ if eq .Name .Title }}
       <a id="{{.Title}}" class="article__title" href="{{ .Permalink }}">{{ .Title }}</a>
     {{else}}
       <div class="article__title">{{.Title}}</div>
