@@ -11,7 +11,8 @@
     </aside>
     <div class="document__detail">
         {{ range .Site.RegularPages.ByDate.Reverse}}
-          {{ partial "article.html" . }}
+         {{ partial "article.html"
+         (dict "context" . "IsSingle" false)}}
         {{ end }}
     </div>
   </div>

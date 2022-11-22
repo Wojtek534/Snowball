@@ -1,3 +1,4 @@
 {{ define "main" }}
-  {{ partial "article.html" . }}
+  {{ partial "article.html"
+  (dict "context" . "IsSingle" true "IsPage" "{{.IsPage}}")}}
 {{ end }}

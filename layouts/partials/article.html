@@ -1,19 +1,19 @@
-<article class="article">
-    <span class="article__date">Created - {{ .Date.Format "January 2, 2006" }}</span>
-    {{if .Params.Lastmod}}
-      <span class="article__date">Last update - {{ .Params.Lastmod.Format "January 2, 2006" }}</span>
+<article class="article {{if .IsSingle}}article--single {{end}}">
+    <span class="article__date">Created - {{ .context.Date.Format "January 2, 2006" }}</span>
+    {{if .context.Params.Lastmod}}
+      <span class="article__date">Last update - {{ .context.Params.Lastmod.Format "January 2, 2006" }}</span>
     {{end}}
     <!-- Todo partials context -->
-    {{ if eq .Name .Title }}
-      <a id="{{.Title}}" class="article__title" href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ if .IsSingle}}
+      <div class="article__title">{{.context.Title}}</div>
     {{else}}
-      <div class="article__title">{{.Title}}</div>
+      <a id="{{.context.Title}}" class="article__title" href="{{ .context.Permalink }}">{{ .context.Title }}</a>
     {{end}}
     <div class="article__content">
-      {{ .Content}}
+      {{ .context.Content}}
     </div>
     <ul class="article__tags">
-      {{ range .Params.tags }}
+      {{ range .context.Params.tags }}
           <li class="tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
       {{ end }}
       </ul>

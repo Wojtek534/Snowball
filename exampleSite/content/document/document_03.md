@@ -2,7 +2,7 @@
 title: "Document_03"
 date: 2022-11-13T15:50:32+01:00
 lastmod: 2022-11-15T18:49:42+01:00
-draft: true
+draft: false
 type: "document"
 tags: ["document", "sample"]
 ---

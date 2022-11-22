@@ -3,8 +3,10 @@
     flex-direction: column;
     overflow-y: auto;
     height: 100%;
-    & .article:not(:last-child) {
-        margin-bottom: 2rem;
+    & .article {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
     }
 }
 
@@ -14,7 +16,10 @@
     background-color: var(--color-cover);
     padding: 1rem;
     border-radius: var(--border-radius);
-    @include typo;
+    &.article--single {
+        height: 100%;
+        overflow: auto;
+    }
     & .article__title {
         font-weight: bold;
         font-size: 1.5rem;
@@ -27,15 +32,7 @@
         font-weight: 500;
     }
     & .article__content {
-        & .highlight {
-            font-size: 1rem;
-            margin-top: 1rem;
-            & pre {
-                padding: 0.5rem 2rem;
-                color: var(--color-text-contrast) !important;
-                background-color: var(--color-link) !important;
-            }
-        }
+        @include typo;
     }
     .article__tags {
         margin-top: 1rem;

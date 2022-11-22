@@ -9,7 +9,9 @@ tags: ["content", "todo"]
 # Todo list
 1. Font + typography improvements
 2. Install + config documentation
-3. Sample description + record for Readme
-4. Single page link disable
-5. Verify display for different md components
-6. Netlify upload + demo sample
+3. Prepere non draft samples with multiple tags and large content
+4. Pagination
+5. Sample description + record for Readme
+6. Single page link disable
+7. Verify display for different md components
+8. Netlify upload + demo sample

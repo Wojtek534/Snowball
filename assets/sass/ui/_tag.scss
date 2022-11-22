@@ -1,6 +1,9 @@
 .tag-list {
-    & .tag:not(:first-child) {
-        margin-left: .25rem;
+    & .tag {
+        margin: .25rem 0;
+        &:not(:first-child) {
+            margin-left: .25rem;
+        }
     }
 }
 

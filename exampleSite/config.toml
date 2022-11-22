@@ -23,8 +23,8 @@ Theme = 'snowball'
     weight = 2
 
   [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
+    name = "Guide"
+    url = "/guide/"
     weight = 3
 
   [[menu.main]]

@@ -13,8 +13,49 @@
     & h3 {
         font-size: 1rem;
     }
-    & ul, ol {
+    & ol {
         margin-left: 1rem;
+    }
+    & ul {
+        position: relative;
+        & li{
+            margin-left: 1rem;
+        &::before {
+        content: '-';
+        position: absolute;
+        margin-left: -.75rem;
+        }
+    }
+    }
+    & blockquote {
+        position: relative;
+        padding: 0 .75rem;
+        border-left: 1px solid var(--color-link);
+        &::before {
+            content: "\201C";
+            color: var(--color-link);
+            position: absolute;
+            top: 0rem;
+            left: .25rem; 
+        }
+    }
+    & .highlight {
+        position: relative;
+        font-size: 1rem;
+        margin-top: 1rem;
+        & pre {
+            padding: 0.5rem 2rem;
+            color: var(--color-text-contrast) !important;
+            background-color: var(--color-link) !important;
+            & code {
+                &::before {
+                    content: "$";
+                    position: absolute;
+                    top: .5rem;
+                    left: .5rem;
+                }
+            }
+        }
     }
 }
 

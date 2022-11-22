@@ -1,21 +1,35 @@
 {{ define "main"}}
+    <!-- Read from .Section? ^ -->
+    <div class="article-list">
+
+    {{ if eq .Type "content" }}
     {{$content := (where .Site.RegularPages "Params.type" "content").ByDate.Reverse }}
+        {{  range $content}}
+            {{ partial "article.html"
+            (dict "context" . "IsSingle" false)}}
+        {{ end }}
+
+    {{ else if eq .Type "document"}}
     {{$document := (where .Site.RegularPages "Params.type" "document").ByDate.Reverse}}
+        {{  range $document}}
+            {{ partial "article.html"
+            (dict "context" . "IsSingle" false)}}
+        {{ end }}
+
+    {{ else if eq .Type "guide"}}
+    {{$guide := (where .Site.RegularPages "Params.type" "guide").ByDate.Reverse}}
+        {{  range $guide}}
+            {{ partial "article.html"
+            (dict "context" . "IsSingle" false)}}
+        {{ end }}
+
+    <!-- Expand above ^ -->
+    {{ else if eq .Type "tags"}}
     {{ $tagSlice := slice .Name }}
     {{$tags := where .Site.RegularPages "Params.tags" "intersect" $tagSlice}}
-    <!-- Refactor ^ -->
-    <div class="article-list">
-    {{ if eq .Type "content" }}
-        {{  range $content}}
-            {{ partial "article.html" . }}
-        {{ end }}
-    {{ else if eq .Type "document"}}
-        {{  range $document}}
-            {{ partial "article.html" . }}
-        {{ end }}
-    {{ else if eq .Type "tags"}}
         {{ range $tags }}
-            {{ partial "article.html" . }}
+            {{ partial "article.html"
+            (dict "context" . "IsSingle" false)}}
         {{end}}
     {{ end }}
     </div>
