@@ -1,7 +1,8 @@
 .article-list {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    //overflow-y: auto;
+    //overflow-x: hidden;
     height: 100%;
     & .article {
         &:not(:last-child) {
@@ -18,7 +19,7 @@
     border-radius: var(--border-radius);
     &.article--single {
         height: 100%;
-        overflow: auto;
+        //overflow: auto;
     }
     & .article__title {
         font-weight: bold;

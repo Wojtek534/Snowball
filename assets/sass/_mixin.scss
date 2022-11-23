@@ -1,7 +1,7 @@
 @mixin typo {
     line-height: 1.5;
     letter-spacing: .005rem;
-    & h1, h2, h3, p {
+    & h1, h2, h3, h4, h5, h6, p {
         margin-top: 1rem;
     }
     & h1 {
@@ -10,7 +10,7 @@
     & h2 {
         font-size: 1.1rem;
     }
-    & h3 {
+    & h3, h4, h5, h6 {
         font-size: 1rem;
     }
     & ol {
@@ -47,6 +47,11 @@
             padding: 0.5rem 2rem;
             color: var(--color-text-contrast) !important;
             background-color: var(--color-link) !important;
+            & span {
+                color: var(--color-text-contrast) !important;
+                white-space: break-spaces;
+            }
+            /*
             & code {
                 &::before {
                     content: "$";
@@ -55,6 +60,7 @@
                     left: .5rem;
                 }
             }
+            */
         }
     }
 }

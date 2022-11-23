@@ -14,7 +14,7 @@ Before installation make sure that Hugo is installed on your device and that's y
 
 Create new hugo project using Hugo CLI:
 ```bash
-hugo new site my_new_site
+$ hugo new site my_new_site
 ```
 ## b. Theme install
 
@@ -22,7 +22,7 @@ Clone [repository](https://github.com/Wojtek534/Snowball.git) into theme folder
 or
 add as submodule
 ```bash
-git submodule add https://github.com/Wojtek534/Snowball.git themes/snowball
+$ git submodule add https://github.com/Wojtek534/Snowball.git themes/snowball
 
 ```
 ## c. Configuration

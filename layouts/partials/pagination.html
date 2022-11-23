@@ -1,0 +1,10 @@
+{{- $pages := union .RegularPages .Sections }}
+{{- $paginator := .Paginate $pages }}
+{{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">
+        Next Page
+        {{- if (.Param "ShowPageNums") }}
+        {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
+        {{- end }}&nbsp;»
+    </a>
+{{- end }}

@@ -11,6 +11,6 @@ tags: ["guide","setup", "code"]
 To launch example site locally, navigate to 'exampleSite' folder, and run hugo command including theme dir as property. You can also expand it with additional commands such as '-D' to include content marked as draft or '--noHTTPCache' to prevent http caching. More commands [here](https://gohugo.io/commands/hugo_server/).
 
 ```bash
-cd exampleSite
-hugo server --themesDir ../.. -D --noHTTPCache
+$ cd exampleSite
+$ hugo server --themesDir ../.. -D --noHTTPCache
 ```
