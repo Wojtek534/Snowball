@@ -1,0 +1,9 @@
+.paginate {
+    & .paginate__item {
+        display: inline-block;
+        margin: 0 .25rem;
+        &.paginate__item--active {
+            text-decoration: underline;
+        }
+    }
+}

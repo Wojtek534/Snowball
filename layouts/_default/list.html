@@ -1,36 +1,32 @@
 {{ define "main"}}
-    <!-- Read from .Section? ^ -->
     <div class="article-list">
-
-    {{ if eq .Type "content" }}
-    {{$content := (where .Site.RegularPages "Params.type" "content").ByDate.Reverse }}
-        {{  range $content}}
-            {{ partial "article.html"
-            (dict "context" . "IsSingle" false)}}
-        {{ end }}
-
-    {{ else if eq .Type "document"}}
-    {{$document := (where .Site.RegularPages "Params.type" "document").ByDate.Reverse}}
-        {{  range $document}}
-            {{ partial "article.html"
-            (dict "context" . "IsSingle" false)}}
-        {{ end }}
-
-    {{ else if eq .Type "guide"}}
-    {{$guide := (where .Site.RegularPages "Params.type" "guide").ByDate.Reverse}}
-        {{  range $guide}}
-            {{ partial "article.html"
-            (dict "context" . "IsSingle" false)}}
-        {{ end }}
-
-    <!-- Expand above ^ -->
-    {{ else if eq .Type "tags"}}
-    {{ $tagSlice := slice .Name }}
-    {{$tags := where .Site.RegularPages "Params.tags" "intersect" $tagSlice}}
-        {{ range $tags }}
-            {{ partial "article.html"
-            (dict "context" . "IsSingle" false)}}
+        {{if eq .Type "tags"}}
+            {{ $tagSlice := slice .Name }}
+            {{- $pages := (where .Site.RegularPages "Params.tags" "intersect" $tagSlice).ByDate.Reverse }}
+            {{- $paginator := .Paginate $pages }}
+            <div class="article-list__pagination">
+                {{partial "pagination.html"
+                (dict "context" . "pages" $pages "paginator" $paginator)}}
+            </div>
+            {{ with $paginator }}
+            {{ range $index, $page := .Pages}}
+                    {{ partial "article.html"
+                    (dict "context" . "IsSingle" false)}}
+                {{ end }}
+            {{ end }}
+        {{else}}
+            {{- $pages := (where .Site.RegularPages "Params.type" .Type).ByDate.Reverse }}
+            {{- $paginator := .Paginate $pages }}
+            <div class="article-list__pagination">
+                {{partial "pagination.html"
+                (dict "context" . "pages" $pages "paginator" $paginator)}}
+            </div>
+            {{ with $paginator }}
+            {{ range $index, $page := .Pages}}
+                    {{ partial "article.html"
+                    (dict "context" . "IsSingle" false)}}
+                {{ end }}
+            {{ end }}
         {{end}}
-    {{ end }}
     </div>
 {{end}}

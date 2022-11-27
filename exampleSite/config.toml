@@ -2,6 +2,7 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'snowball'
 Theme = 'snowball'
+paginate = 4
 
 [author]
   name = "Wojciech Rzepka"
@@ -13,7 +14,7 @@ Theme = 'snowball'
 
 [menu]
   [[menu.main]]
-    name = "Content"
+    name = "Sample content"
     url = "/content/"
     weight = 1
 

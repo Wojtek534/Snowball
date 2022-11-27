@@ -1,0 +1,47 @@
+{{$paginator := .paginator}}
+<div class="paginate">
+    {{if and ($paginator.Pagers) (gt $paginator.TotalPages 1)}}
+    <ul class="paginate__list">
+        <!-- One step back -->
+        {{ if .paginator.HasPrev }}
+        <li class="paginate__item">
+            <a class="" href="{{ .paginator.Prev.URL | absURL }}">
+            Previous
+            </a>
+        </li>
+        {{ end }}
+        <!-- Always show go to first element -->
+        {{ if ne $paginator.PageNumber 1 }}
+        <li class="paginate__item">
+          <a href="{{ $paginator.First.URL }}">
+            ««
+          </a>
+        </li>
+      {{ end }}
+      <!-- Numbers with pages -->
+        {{ range  $index, $page := $paginator.Pagers}}
+        <li class="paginate__item {{ if eq . $paginator }} paginate__item--active{{ end }}">
+            <a href="{{.URL | absURL}}">
+                {{add 1 $index}}
+            </a>
+        </li>
+        {{end}}
+        <!-- Always show go to last element -->
+        {{ if ne $paginator.PageNumber $paginator.TotalPages }}
+        <li class="paginate__item">
+          <a href="{{ $paginator.Last.URL }}">
+            »»
+          </a>
+        </li>
+        {{ end }}
+        <!-- One step forward -->
+        {{ if .paginator.HasNext }}
+        <li class="paginate__item">
+            <a class="" href="{{ .paginator.Next.URL | absURL }}">
+            Next
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{end}}
+</div>

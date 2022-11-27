@@ -10,8 +10,9 @@ tags: ["content", "todo"]
 1. Font + typography improvements
 2. Install + config documentation
 3. Prepere non draft samples with multiple tags and large content
-4. Pagination
+4. ~~Pagination~~
 5. Sample description + record for Readme
-6. Single page link disable
-7. Verify display for different md components
-8. Netlify upload + demo sample
+6. ~~Single page link disable~~
+7. Custom content order
+8. Verify display for different md components
+9. Netlify upload + demo sample
