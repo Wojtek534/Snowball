@@ -11,7 +11,7 @@
     </aside>
     <div class="document__detail">
       <div class="article-list">
-      {{- $pages := .Site.RegularPages.ByDate.Reverse }}
+      {{- $pages := .Site.RegularPages.ByDate.Reverse.ByWeight }}
       {{- $paginator := .Paginate $pages }}
       <div class="article-list__pagination">
         {{partial "pagination.html"

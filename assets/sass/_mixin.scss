@@ -27,6 +27,13 @@
         }
     }
     }
+    & img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 10rem;
+        object-fit: cover;
+    }
     & blockquote {
         position: relative;
         padding: 0 .75rem;

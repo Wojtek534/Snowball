@@ -5,4 +5,5 @@ lastUpdate: {{.Date}}
 draft: true
 type: "document"
 tags:
+weight:
 ---
