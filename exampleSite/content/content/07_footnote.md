@@ -7,5 +7,16 @@ type: "content"
 tags: ["content", "sample", "footnote"]
 weight: 7
 ---
-# Fourth content
-Proin mattis egestas arcu, et pulvinar enim convallis placerat. Vivamus volutpat libero ac cursus pulvinar. Maecenas nibh massa, vehicula ac malesuada vitae, iaculis non sem. Morbi nec eleifend nunc. Etiam rutrum magna ante. Fusce vulputate nulla id sem placerat dapibus. Vivamus sollicitudin vehicula erat vel mollis. Morbi sodales, leo varius venenatis consequat, massa sapien aliquam odio, nec hendrerit ipsum dui quis nisl.
+# Note
+
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.

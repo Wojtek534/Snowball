@@ -23,6 +23,10 @@
          (dict "context" . "IsSingle" false)}}
         {{ end }}
         {{end}}
+        <div class="article-list__pagination">
+          {{partial "pagination.html"
+          (dict "context" . "pages" $pages "paginator" $paginator)}}
+        </div>
       </div>
     </div>
   </div>

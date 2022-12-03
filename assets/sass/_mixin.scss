@@ -29,10 +29,9 @@
     }
     & img {
         display: block;
-        width: 100%;
-        height: auto;
-        max-height: 10rem;
-        object-fit: cover;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
     & blockquote {
         position: relative;
@@ -46,17 +45,56 @@
             left: .25rem; 
         }
     }
+    & table {
+        width: 100%;
+        border-spacing: 0;
+        & thead {
+            & tr {
+                text-align: left;
+                & th {
+                    font-weight: bold;
+                border-bottom: 1px solid var(--color-link);
+                padding: 0 .5rem;
+                /*
+                &:not(:last-child) {
+                    padding-left: 0rem;
+                }
+                */
+                }
+            }
+        }
+        & tbody {
+            tr {
+                td {
+                    padding: .5rem;
+                    border-bottom: 1px solid var(--color-link);
+                    border-right: 1px solid var(--color-link);
+                    &:first-child {
+                        border-left: 1px solid var(--color-link);
+                    }
+                    /*
+                    &:not(:last-child) {
+                        padding-left: 0rem;
+                    }
+                    */
+                    
+                }
+            }
+        }
+    }
     & .highlight {
         position: relative;
         font-size: 1rem;
         margin-top: var(--margin-content);
         & pre {
             padding: 0.5rem 2rem;
-            color: var(--color-text-contrast) !important;
-            background-color: var(--color-link) !important;
-            & span {
-                color: var(--color-text-contrast) !important;
-                white-space: break-spaces;
+            color: var(--color-text) !important;
+            background-color: var(--color-text-contrast) !important;
+            & .language-bash {
+                & span {
+                    color: var(--color-text) !important;
+                    white-space: break-spaces;
+                }
             }
             /*
             & code {

@@ -2,8 +2,13 @@
 <html lang="en">
     <head>
         {{ partial "head-meta.html" . }}
+        <script type="text/javascript" async>
+            // Set Theme from localstorage
+            initializeTheme();
+        </script>
     </head>
     <body>
+
         <div class="layout" >
             {{ partial "header.html" . }}
             {{ partial "tags.html" . }}
@@ -13,8 +18,8 @@
             {{ partial "footer.html" . }}
         </div>
         <script type="text/javascript">
-            // Set theme
-            initializeTheme();
+            // Set Theme label
+            setThemeLabel();
             //  Set Accessabilities
             setAccessibility();
         </script>

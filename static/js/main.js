@@ -42,6 +42,14 @@ function switchTheme () {
 
 function setTheme (theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    let el = document.getElementById('theme-switch')
+    if(el) {
+        el.innerHTML = theme;
+    }
+}
+
+function setThemeLabel() {
+    const theme = localStorage.getItem('theme');
     document.getElementById('theme-switch').innerHTML = theme;
 }
 
@@ -50,7 +58,7 @@ function isInternetExplorer () {
     return (agent.indexOf("MSIE") > -1 || agent.indexOf("Trident") > -1);
 }
 
-function setFooter (id) {
+function setFooterLabel (id) {
     document.getElementById(id).innerHTML = "Copyright (c) "+ new Date().getFullYear().toString();
 }
 
@@ -62,6 +70,7 @@ function setAccessibility () {
 
 }
 
+/* Set key navigateion */
 window.addEventListener('keydown', keyNavigation);
 
 function keyNavigation (event) {
