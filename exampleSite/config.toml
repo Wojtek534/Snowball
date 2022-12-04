@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'snowball'
 Theme = 'snowball'
 paginate = 4
+enableEmoji = true
+enableRobotsTXT = true
 
 [author]
   name = "Wojciech Rzepka"

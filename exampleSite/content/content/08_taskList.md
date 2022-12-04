@@ -7,5 +7,7 @@ type: "content"
 tags: ["content", "sample", "task list"]
 weight: 8
 ---
-# Fourth content
-Proin mattis egestas arcu, et pulvinar enim convallis placerat. Vivamus volutpat libero ac cursus pulvinar. Maecenas nibh massa, vehicula ac malesuada vitae, iaculis non sem. Morbi nec eleifend nunc. Etiam rutrum magna ante. Fusce vulputate nulla id sem placerat dapibus. Vivamus sollicitudin vehicula erat vel mollis. Morbi sodales, leo varius venenatis consequat, massa sapien aliquam odio, nec hendrerit ipsum dui quis nisl.
+# Weekly tasks
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media

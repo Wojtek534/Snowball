@@ -19,6 +19,8 @@
     & ul {
         position: relative;
         & li{
+            display: flex;
+            align-items: center;
             margin-left: 1rem;
         &::before {
         content: '-';
@@ -55,11 +57,6 @@
                     font-weight: bold;
                 border-bottom: 1px solid var(--color-link);
                 padding: 0 .5rem;
-                /*
-                &:not(:last-child) {
-                    padding-left: 0rem;
-                }
-                */
                 }
             }
         }
@@ -72,11 +69,6 @@
                     &:first-child {
                         border-left: 1px solid var(--color-link);
                     }
-                    /*
-                    &:not(:last-child) {
-                        padding-left: 0rem;
-                    }
-                    */
                     
                 }
             }
@@ -96,20 +88,9 @@
                     white-space: break-spaces;
                 }
             }
-            /*
-            & code {
-                &::before {
-                    content: "$";
-                    position: absolute;
-                    top: .5rem;
-                    left: .5rem;
-                }
-            }
-            */
         }
     }
 }
-
 @mixin stripe {
     position: absolute;
     z-index: -1;

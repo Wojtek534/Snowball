@@ -7,13 +7,14 @@ type: "content"
 tags: ["content", "todo"]
 weight: 1
 ---
-# Todo list
+# launch list 🚀
 1. Font + typography improvements
 2. Install + config documentation
 3. Prepere non draft samples with multiple tags and large content
-4. ~~Pagination~~
-5. Sample description + record for Readme
-6. ~~Single page link disable~~
-7. ~~Custom content order~~
-8. Verify display for different md components
-9. Netlify upload + demo sample
+4. Smooth open page transition
+5. ~~Pagination~~
+6. Sample description + record for Readme
+7. ~~Single page link disable~~
+8. ~~Custom content order~~
+9. Verify display for different md components
+10. Netlify upload + demo sample

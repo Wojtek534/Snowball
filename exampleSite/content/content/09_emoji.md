@@ -8,4 +8,33 @@ tags: ["content", "sample", "emoji"]
 weight: 9
 ---
 # Fourth content
-Proin mattis egestas arcu, et pulvinar enim convallis placerat. Vivamus volutpat libero ac cursus pulvinar. Maecenas nibh massa, vehicula ac malesuada vitae, iaculis non sem. Morbi nec eleifend nunc. Etiam rutrum magna ante. Fusce vulputate nulla id sem placerat dapibus. Vivamus sollicitudin vehicula erat vel mollis. Morbi sodales, leo varius venenatis consequat, massa sapien aliquam odio, nec hendrerit ipsum dui quis nisl.
+
+Enable emojis in your hugo config by adding
+```bash
+enableEmoji = true
+```
+
+[Emoji cheat sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
+or just copy into you md file
+[Emoji list](https://unicode-table.com/en/emoji/)
+
+Gone camping! :tent: Be back soon.
+
+That is so funny! :joy:
+
+😄😄😄
+
+my personal favourites
+
+| Label      | Icon |
+| ----------- | ----------- |
+| Rocket      | 🚀       |
+| Fire        | 🔥        |
+| 	Red Heart   | ❤️        |
+| Tears of joy| 😂        |
+|Smiling Face with Sunglasses|😎|
+| Thumbs Up Sign | 👍 |
+| Party Popper | 🎉| 
+| 	Partying Face | 🥳 |
+| Flexed Biceps | 💪 |
+| Check Mark Button | ✅ | 

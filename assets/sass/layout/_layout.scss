@@ -45,7 +45,6 @@
           display: flex;
           flex-direction: row;
           align-items: flex-end;
-          //color: var(--color-text);
           & > *:not(:first-child) {
             margin-left: 1rem;
           }

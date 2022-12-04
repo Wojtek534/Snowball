@@ -59,7 +59,7 @@ function isInternetExplorer () {
 }
 
 function setFooterLabel (id) {
-    document.getElementById(id).innerHTML = "Copyright (c) "+ new Date().getFullYear().toString();
+    document.getElementById(id).innerHTML = "Copyright (©) "+ new Date().getFullYear().toString();
 }
 
 function setAccessibility () {

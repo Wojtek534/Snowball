@@ -211,10 +211,12 @@
   input[type=radio] {
     border: 0;
     padding: 0;
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: .25rem;
   
   }
+
   input[type=password] {
   letter-spacing: 0.3rem;
   }
