@@ -48,7 +48,7 @@
         }
     }
     & table {
-        width: 100%;
+        min-width: 25rem;
         border-spacing: 0;
         & thead {
             & tr {
@@ -105,3 +105,16 @@
     background-size: 1rem 1rem;
     background-position: center;
 }
+
+@mixin fade {
+    animation: fadeIn .25s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+  }

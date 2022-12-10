@@ -2,7 +2,7 @@
 title: "Todo list"
 date: 2022-11-21T18:49:47+01:00
 lastmod: 2022-21-15T18:49:42+01:00
-draft: true
+draft: false
 type: "content"
 tags: ["content", "todo"]
 weight: 1
@@ -11,7 +11,7 @@ weight: 1
 1. Font + typography improvements
 2. Install + config documentation
 3. Prepere non draft samples with multiple tags and large content
-4. Smooth open page transition
+4. ~~Smooth page transition~~
 5. ~~Pagination~~
 6. Sample description + record for Readme
 7. ~~Single page link disable~~

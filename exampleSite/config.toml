@@ -16,21 +16,16 @@ enableRobotsTXT = true
 
 [menu]
   [[menu.main]]
-    name = "Sample content"
-    url = "/content/"
+    name = "Guide"
+    url = "/guide/"
     weight = 1
 
   [[menu.main]]
-    name = "Document"
-    url = "/document/"
+    name = "Stylings"
+    url = "/content/"
     weight = 2
 
   [[menu.main]]
-    name = "Guide"
-    url = "/guide/"
+    name = "Articles"
+    url = "/article/"
     weight = 3
-
-  [[menu.main]]
-  name = "Documents"
-  url = "/document/"
-  weight = 4

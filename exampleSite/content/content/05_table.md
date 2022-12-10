@@ -2,7 +2,7 @@
 title: "Table"
 date: 2022-11-15T18:49:52+01:00
 lastmod: 2022-11-15T18:49:42+01:00
-draft: true
+draft: false
 type: "content"
 tags: ["content", "sample", "table"]
 weight: 5
