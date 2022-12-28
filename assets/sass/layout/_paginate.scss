@@ -1,7 +1,7 @@
 .paginate {
   & .paginate__item {
     display: inline-block;
-    margin: 0 0.25rem;
+    margin: 0 calc(var(--margin) / 4);
     &.paginate__item--active {
       text-decoration: underline;
     }

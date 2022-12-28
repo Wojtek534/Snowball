@@ -12,7 +12,7 @@
   --color-black: #111;
   --color-white: #fff;
   --border-radius: 0.5rem;
-  --margin-content: 1rem;
+  --margin: 1rem;
 }
 
 [data-theme="dark"] {
@@ -33,7 +33,7 @@
   --color-frame: #555;
   --color-cover: #f7fafc;
   --color-cover-light: #f2f8fa;
-  --color-text: #084567;
+  --color-text: #f7f0ed;
   --color-text-contrast: #e7f6ff;
   --color-background: #fff;
   --color-background-contrast: #111;
@@ -89,7 +89,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   //font-family: "Source Sans Pro", sans-serif;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -114,17 +114,14 @@ a {
 }
 
 h1 {
-  font-size: 2rem;
   line-height: 1.25;
 }
 
 h2 {
-  font-size: 1.8rem;
   line-height: 1.25;
 }
 
 h3 {
-  font-size: 1.6rem;
   line-height: 1.25;
 }
 
