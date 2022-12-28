@@ -1,30 +1,20 @@
-{{ define "main"}}
-{{$pages := slice}}
-{{$paginator := slice}}
-{{if eq .Type "tags"}}
-    {{ $tagSlice := slice .Name }}
-    {{- $pages = (where .Site.RegularPages "Params.tags" "intersect" $tagSlice).ByDate.Reverse.ByWeight }}
-    {{- $paginator = .Paginate $pages }}
-{{else}}
-    {{- $pages = (where .Site.RegularPages "Params.type" .Type).ByDate.Reverse.ByWeight }}
-    {{- $paginator = .Paginate $pages }}
-{{end}}
-    <div class="article-list">
-        <div class="article-list__pagination">
-            {{partial "pagination.html"
-            (dict "context" . "pages" $pages "paginator" $paginator)}}
-        </div>
-        {{ with $paginator }}
-        {{ range $index, $page := .Pages}}
-                {{ partial "article.html"
-                (dict "context" . "IsSingle" false)}}
-            {{ end }}
-        {{ end }}
-        <div class="article-list__pagination">
-            {{partial "pagination.html"
-            (dict "context" . "pages" $pages "paginator" $paginator)}}
-        </div>
-    </div>
-    
-    
+{{ define "main"}} {{$pages := slice}} {{$paginator := slice}} {{if eq .Type
+"tags"}} {{ $tagSlice := slice .Name }} {{- $pages = (where .Site.RegularPages
+"Params.tags" "intersect" $tagSlice).ByDate.Reverse.ByWeight }} {{- $paginator =
+.Paginate $pages }} {{else}} {{- $pages = (where .Site.RegularPages
+"Params.type" .Type).ByDate.Reverse.ByWeight }} {{- $paginator = .Paginate
+$pages }} {{end}}
+<div class="article-list">
+  <div class="article-list__pagination">
+    {{partial "pagination.html" (dict "context" . "pages" $pages "paginator"
+    $paginator)}}
+  </div>
+  {{ with $paginator }} {{ range $index, $page := .Pages}} {{ partial
+  "article.html" (dict "context" . "IsSingle" false)}} {{ end }} {{ end }}
+  <div class="article-list__pagination">
+    {{partial "pagination.html" (dict "context" . "pages" $pages "paginator"
+    $paginator)}}
+  </div>
+</div>
+
 {{end}}

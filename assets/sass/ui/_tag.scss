@@ -1,27 +1,27 @@
 .tag-list {
-    & .tag {
-        margin: .25rem 0;
-        &:not(:first-child) {
-            margin-left: .25rem;
-        }
+  & .tag {
+    margin: 0.25rem 0;
+    &:not(:first-child) {
+      margin-left: 0.25rem;
     }
+  }
 }
 
 .tag {
-    display: inline-block;
-    padding: .25rem;
-    border: 1px solid var(--color-link);
-    border-radius: var(--border-radius);
-    & .tag__counter {
-        margin-left: .25rem
+  display: inline-block;
+  padding: 0.25rem;
+  border: 1px solid var(--color-link);
+  border-radius: var(--border-radius);
+  & .tag__counter {
+    margin-left: 0.25rem;
+  }
+  & a:focus {
+    outline-offset: 0.55rem;
+  }
+  &.tag--active {
+    background-color: var(--color-link);
+    & a {
+      color: var(--color-text-contrast);
     }
-    & a:focus {
-        outline-offset: .55rem;
-    }
-    &.tag--active {
-        background-color: var(--color-link);
-        & a {
-            color: var(--color-text-contrast);
-        }
-    }
+  }
 }

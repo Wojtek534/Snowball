@@ -1,230 +1,241 @@
 :root {
-    --primary-color: #000;
-    --color-frame: #555;
-    --color-cover: #f7fafc;
-    --color-cover-light: #f2f8fa;
-    --color-text: #111;
-    --color-text-contrast: #e7f6ff;
-    --color-background: #fff;
-    --color-background-contrast: #111;
-    --color-background-pattern: #f2f2f2;
-    --color-link: #0a75ad;
-    --color-black: #111;
-    --color-white: #fff;
-    --border-radius: .5rem;
-    --margin-content: 1rem;
-  }
-  
-  [data-theme="dark"] {
-    --primary-color: #fff;
-    --color-frame: #f5f5f5;
-    --color-cover: #1e1e1e;
-    --color-cover-light: #333;
-    --color-text: #f9f9f9;
-    --color-text-contrast: #191919;
-    --color-background: #292a2d;
-    --color-background-contrast: #f9f9f9;
-    --color-background-pattern: #555;
-    --color-link: #ff9900;
-  }
-  
-  [data-theme="light"] {
-    --primary-color: #000;
-    --color-frame: #555;
-    --color-cover: #f7fafc;
-    --color-cover-light: #f2f8fa;
-    --color-text: #111;
-    --color-text-contrast: #e7f6ff;
-    --color-background: #fff;
-    --color-background-contrast: #111;
-    --color-background-pattern: #f2f2f2;
-    --color-link: #0a75ad;
-  }
-  
+  --primary-color: #000;
+  --color-frame: #555;
+  --color-cover: #f7fafc;
+  --color-cover-light: #f2f8fa;
+  --color-text: #111;
+  --color-text-contrast: #e7f6ff;
+  --color-background: #fff;
+  --color-background-contrast: #111;
+  --color-background-pattern: #f2f2f2;
+  --color-link: #0a75ad;
+  --color-black: #111;
+  --color-white: #fff;
+  --border-radius: 0.5rem;
+  --margin-content: 1rem;
+}
+
+[data-theme="dark"] {
+  --primary-color: #fff;
+  --color-frame: #f5f5f5;
+  --color-cover: #1e1e1e;
+  --color-cover-light: #333;
+  --color-text: #f7f0e1;
+  --color-text-contrast: #191919;
+  --color-background: #292a2d;
+  --color-background-contrast: #f9f9f9;
+  --color-background-pattern: #555;
+  --color-link: #ff9900;
+}
+
+[data-theme="light"] {
+  --primary-color: #000;
+  --color-frame: #555;
+  --color-cover: #f7fafc;
+  --color-cover-light: #f2f8fa;
+  --color-text: #084567;
+  --color-text-contrast: #e7f6ff;
+  --color-background: #fff;
+  --color-background-contrast: #111;
+  --color-background-pattern: #f2f2f2;
+  --color-link: #0a75ad;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+/*
+    56.25% - 9px
+    62.5% - 10px
+    68.8% - 11px
+    75% - 12 px
+    81.25% - 13px
+    87.5% - 14px
+    93.75$ - 15px
+    100 % - 16px
+  */
+
+@media only screen and (min-width: 37.5em) {
   html {
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  html {
     font-size: 62.5%;
   }
+}
 
-  @media only screen and (min-width: 37.5em) {
-    html {
-      font-size: 56.25%;
-    }
+@media only screen and (min-width: 75em) {
+  html {
+    font-size: 68.8%;
   }
-  
-  @media only screen and (min-width: 56.25em) {
-    html {
-      font-size: 62.5%;
-    }
-  }
-  
-  @media only screen and (min-width: 75em) {
-    html {
-      font-size: 68.8%;
-    }
-  }
-  
-  @media only screen and (min-width: 112.5em) {
-    html {
-      font-size: 75%;
-    }
-  }
-  body {
-    color: var(--color-text);
-    background-color: var(--color-background);
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 400;
-    transition: .25s all;
-  }
-  
-  a {
-    color: var(--color-link);
-    text-decoration: none;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    line-height: 1.25;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-    line-height: 1.25;
-  }
-  
-  h3 {
-    font-size: 1.6rem;
-    line-height: 1.25;
-  }
-  
-  a,
-  a:visited,
-  a:focus {
-    display: inline-flex;
-    align-items: center;
-    color: var(--color-link);
-    text-decoration: none;
-    cursor: pointer;
-  }
-  a:focus {
-    outline: 1px solid var(--color-link);
-  }
-  
-  a:hover,
-  a:visited:hover,
-  a:focus:hover {
-    text-decoration: underline;
-  }
-  
-  ::-webkit-scrollbar {
-    width: 1.5rem;
-    cursor: pointer;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    //background-color: var(--color-text);
-    background-color: var(--color-link);
-    border-radius: 2rem;
-    min-height: 5rem;
-    border: 6px solid transparent;
-    background-clip: content-box;
-  }
-  
-  
-  li.active a {
-    opacity: 0.9;
-  }
-  
-  i.icon {
-    font-size: 1.2rem;
-    color: var(--color-text);
-  }
-  
-  
-  form .formline:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-  
-  input,
-  textarea,
-  select,
-  button {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.25;
-    margin: 0;
-  }
-  input:focus,
-  textarea:focus,
-  select:focus,
-  button:focus {
-        outline: none;
-  }
-  
-  input:not([type=checkbox]),
-  textarea,
-  select,
-  button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-  
-  label {
-    font-size: 1.1rem;
-  }
-  
-  input[type=text],
-  input[type=textarea],
-  input[type=password],
-  input[type=date],
-  input[type=number] {
-    color: inherit;
-    height: 3rem;
-    padding: 0 1.5rem;
-    font-size: 1.2rem;
-    border: 1px solid var(--color-text);
-  }
-  
-  input[type=checkbox],
-  input[type=radio] {
-    border: 0;
-    padding: 0;
-    height: 1.25rem;
-    width: 1.25rem;
-    margin-right: .25rem;
-  
-  }
+}
 
-  input[type=password] {
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  //font-family: "Source Sans Pro", sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  transition: 0.25s all;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+a,
+a:visited,
+a:focus {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-link);
+  text-decoration: none;
+  cursor: pointer;
+}
+a:focus {
+  outline: 1px solid var(--color-link);
+}
+
+a:hover,
+a:visited:hover,
+a:focus:hover {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  //background-color: var(--color-text);
+  background-color: var(--color-link);
+  border-radius: 2rem;
+  min-height: 5rem;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+li.active a {
+  opacity: 0.9;
+}
+
+i.icon {
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+form .formline:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.25;
+  margin: 0;
+}
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+input:not([type="checkbox"]),
+textarea,
+select,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+label {
+  font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="textarea"],
+input[type="password"],
+input[type="date"],
+input[type="number"] {
+  color: inherit;
+  height: 3rem;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--color-text);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  border: 0;
+  padding: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+input[type="password"] {
   letter-spacing: 0.3rem;
-  }
-  
-  input {
-    width: 100%;
-  }
-  
-  ul {
-    list-style: none;
-  }
+}
+
+input {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
