@@ -22,6 +22,9 @@
   &.article--single {
     height: 100%;
   }
+  & .article__return {
+    margin-bottom: calc(var(--margin) * 3 / 4);
+  }
   & .article__title {
     font-weight: bold;
     font-size: 1.15em;

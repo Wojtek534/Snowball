@@ -1,4 +1,7 @@
 <article class="article {{if .IsSingle}}article--single {{end}}">
+  {{ if .IsSingle}}
+      <div class="article__return"><a href="{{.context.Parent.Permalink }}">Return</a></div>
+    {{end}}
     <span class="article__date">Created - {{ .context.Date.Format "January 2, 2006" }}</span>
     {{if .context.Params.Lastmod}}
       <span class="article__date">Last update - {{ .context.Params.Lastmod.Format "January 2, 2006" }}</span>

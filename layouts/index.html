@@ -1,33 +1,21 @@
 {{define "main"}}
-  <div class="document">
-    <aside id="document-list" class="document__list">
-      <ul>
-      {{ range .Site.Menus.main }}
-        <li>
-          <a class="document-list__item" href="{{ .URL | absURL }}" alt="Navigation to {{.Name}}">{{.Name}}</a>
-        </li>
-        {{end}}
-      </ul>
-    </aside>
-    <div class="document__detail">
-      <div class="article-list">
-      {{- $pages := .Site.RegularPages.ByDate.Reverse.ByWeight }}
-      {{- $paginator := .Paginate $pages }}
+<div class="document">
+  {{partial "mainmenu.html" (dict "menu" .Site.Menus.main)}}
+  <div class="document__detail">
+    <div class="article-list">
+      {{- $pages := .Site.RegularPages.ByDate.Reverse.ByWeight }} {{- $paginator
+      := .Paginate $pages }}
       <div class="article-list__pagination">
-        {{partial "pagination.html"
-        (dict "context" . "pages" $pages "paginator" $paginator)}}
+        {{partial "pagination.html" (dict "context" . "pages" $pages "paginator"
+        $paginator)}}
       </div>
-      {{ with $paginator }}
-        {{ range .Pages}}
-         {{ partial "article.html"
-         (dict "context" . "IsSingle" false)}}
-        {{ end }}
-        {{end}}
-        <div class="article-list__pagination">
-          {{partial "pagination.html"
-          (dict "context" . "pages" $pages "paginator" $paginator)}}
-        </div>
+      {{ with $paginator }} {{ range .Pages}} {{ partial "article.html" (dict
+      "context" . "IsSingle" false)}} {{ end }} {{end}}
+      <div class="article-list__pagination">
+        {{partial "pagination.html" (dict "context" . "pages" $pages "paginator"
+        $paginator)}}
       </div>
     </div>
   </div>
+</div>
 {{end}}

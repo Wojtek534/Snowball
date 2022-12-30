@@ -1,0 +1,14 @@
+<aside class="sidemenu">
+  <ul class="">
+    {{ range .menu}}
+    <li>
+      <a
+        class="document-list__item"
+        href="{{ .URL | absURL }}"
+        alt="Navigation to {{.Name}}"
+        >{{.Name}}</a
+      >
+    </li>
+    {{end}}
+  </ul>
+</aside>

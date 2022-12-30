@@ -2,7 +2,7 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'snowball'
 Theme = 'snowball'
-paginate = 4
+paginate = 3
 enableEmoji = true
 enableRobotsTXT = true
 

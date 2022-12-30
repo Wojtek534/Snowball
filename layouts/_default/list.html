@@ -5,16 +5,20 @@
 "Params.type" .Type).ByDate.Reverse.ByWeight }} {{- $paginator = .Paginate
 $pages }} {{end}}
 <div class="article-list">
+  {{partial "sidemenu.html" (dict "context" . "pages" .Pages)}} {{if gt $pages
+  $paginator.PageSize}}
   <div class="article-list__pagination">
     {{partial "pagination.html" (dict "context" . "pages" $pages "paginator"
     $paginator)}}
   </div>
-  {{ with $paginator }} {{ range $index, $page := .Pages}} {{ partial
-  "article.html" (dict "context" . "IsSingle" false)}} {{ end }} {{ end }}
+  {{end}} {{ with $paginator }} {{ range $index, $page := .Pages}} {{ partial
+  "article.html" (dict "context" . "IsSingle" false)}} {{ end }} {{ end }} {{if
+  gt $pages $paginator.PageSize}}
   <div class="article-list__pagination">
     {{partial "pagination.html" (dict "context" . "pages" $pages "paginator"
     $paginator)}}
   </div>
+  {{end}}
 </div>
 
 {{end}}

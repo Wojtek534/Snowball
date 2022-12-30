@@ -1,0 +1,7 @@
+<aside class="sidemenu">
+  <ul class="">
+    {{ range $index, $page := .pages}}
+    <li><a href="{{$page.Permalink}}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</aside>
