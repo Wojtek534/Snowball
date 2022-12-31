@@ -5,8 +5,9 @@
 "Params.type" .Type).ByDate.Reverse.ByWeight }} {{- $paginator = .Paginate
 $pages }} {{end}}
 <div class="article-list">
-  {{partial "sidemenu.html" (dict "context" . "pages" .Pages)}} {{if gt $pages
-  $paginator.PageSize}}
+  {{partial "sidemenu.html" (dict "context" . "pages" .Pages)}}
+  <aside><div id="contentmenu" class="sidemenu sidemenu--right"></div></aside>
+  {{if gt $pages $paginator.PageSize}}
   <div class="article-list__pagination">
     {{partial "pagination.html" (dict "context" . "pages" $pages "paginator"
     $paginator)}}
@@ -20,5 +21,7 @@ $pages }} {{end}}
   </div>
   {{end}}
 </div>
-
+<script type="text/javascript">
+  setHeadingSideMenu()
+</script>
 {{end}}

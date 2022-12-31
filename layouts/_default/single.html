@@ -1,4 +1,8 @@
 {{ define "main" }}
-  {{ partial "article.html"
-  (dict "context" . "IsSingle" true "IsPage" "{{.IsPage}}")}}
+<aside><div id="contentmenu" class="sidemenu sidemenu--right"></div></aside>
+{{ partial "article.html" (dict "context" . "IsSingle" true "IsPage"
+"{{.IsPage}}")}}
+<script type="text/javascript">
+  setHeadingSideMenu()
+</script>
 {{ end }}

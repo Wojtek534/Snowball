@@ -10,7 +10,7 @@
   p,
   ol,
   ul {
-    margin-top: var(--margin);
+    margin: var(--margin) 0 0 0;
   }
   & h1 {
     font-size: 1.15em;
@@ -49,10 +49,10 @@
   & blockquote {
     position: relative;
     padding: 0 0.75rem;
-    border-left: 1px solid var(--color-link);
+    border-left: 1px solid var(--color-primary);
     &::before {
       content: "\201C";
-      color: var(--color-link);
+      color: var(--color-primary);
       position: absolute;
       top: 0rem;
       left: 0.25rem;
@@ -66,7 +66,7 @@
         text-align: left;
         & th {
           font-weight: bold;
-          border-bottom: 1px solid var(--color-link);
+          border-bottom: 1px solid var(--color-primary);
           padding: 0 0.5rem;
         }
       }
@@ -75,10 +75,10 @@
       tr {
         td {
           padding: 0.5rem;
-          border-bottom: 1px solid var(--color-link);
-          border-right: 1px solid var(--color-link);
+          border-bottom: 1px solid var(--color-primary);
+          border-right: 1px solid var(--color-primary);
           &:first-child {
-            border-left: 1px solid var(--color-link);
+            border-left: 1px solid var(--color-primary);
           }
         }
       }
@@ -98,31 +98,6 @@
           background-color: transparent !important;
           white-space: break-spaces;
         }
-      }
-    }
-  }
-}
-@mixin list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  & li {
-    width: 100%;
-    & a {
-      min-height: 3rem;
-      padding: 0.5rem 2rem;
-      border-radius: 0.5rem;
-      width: 100%;
-      color: var(--color-text);
-      font-weight: 500;
-      text-transform: lowercase;
-      &:not(:last-child) {
-        margin-bottom: calc(var(--margin) / 2);
-      }
-      &:hover {
-        cursor: pointer;
-        text-decoration: none;
-        background-color: var(--color-cover-light);
       }
     }
   }
